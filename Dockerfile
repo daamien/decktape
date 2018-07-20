@@ -50,6 +50,9 @@ RUN addgroup -g 1000 node && \
     mkdir /slides && \
     chown node:node /slides
 
+# useful for CI environments
+RUN apk add --no-cache make 
+
 WORKDIR /slides
 
 USER node
